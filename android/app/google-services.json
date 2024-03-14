@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "916064056591",
+    "project_id": "diploma-d9c10",
+    "storage_bucket": "diploma-d9c10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916064056591:android:a5084cda5b544a944dba7a",
+        "android_client_info": {
+          "package_name": "com.example.diploma_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Bo5AUSqAElYcZjwyz8byDrIIzY65zWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
