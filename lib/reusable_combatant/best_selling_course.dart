@@ -18,7 +18,7 @@ class SellingCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
       ),
       child: Padding(
-        padding:  EdgeInsets.all(width*0.008),
+        padding:  EdgeInsets.all(width*0.02),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -26,13 +26,13 @@ class SellingCard extends StatelessWidget {
               children: [
                 Container(
                   height: height,
-                  margin: EdgeInsets.all(width*0.01),
+                  // margin: EdgeInsets.all(width*0.02),
                   decoration: BoxDecoration(
                       color: const Color.fromRGBO(0, 65, 130, 1.0),
-                      borderRadius: BorderRadius.circular(30)
+                      borderRadius: BorderRadius.circular(20)
                   ),
-                  child: SvgPicture.asset("assets/images/logo_dark_svg.svg"),),
-                SizedBox(width: width*0.03,),
+                  child: SvgPicture.asset("assets/images/logo_dark_svg.svg",width: width*0.3,),),
+                SizedBox(width: width*0.02,),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -59,14 +59,16 @@ class SellingCard extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
-                  fixedSize: Size(width*0.25, height*0.05),
+                  fixedSize: Size(width*0.24, height*0.05),
                   shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
                 ),
-                child: Text("Join Now",style: TextStyle(
-                    color: Theme.of(context).colorScheme.surface,
-                    fontSize: width*0.04,
-                    fontWeight: FontWeight.w400
-                ),)
+                child: Center(
+                  child: Text("Join Now",style: TextStyle(
+                      color: Theme.of(context).colorScheme.surface,
+                      fontSize: width*0.023,
+                      fontWeight: FontWeight.w700
+                  ),),
+                )
             ),
 
           ],

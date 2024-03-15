@@ -74,7 +74,7 @@ class _LogInScreenState extends State<LogInScreen> {
                           ?"assets/icons/icon_moon.svg"
                           :"assets/icons/icon_sun.svg"
                       ,
-                      width: width * 0.04,
+                      width: width * 0.06,
                     ),
                   ),
                 ],

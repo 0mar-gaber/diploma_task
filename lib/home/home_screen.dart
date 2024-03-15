@@ -37,10 +37,12 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     children: [
                       SvgPicture.asset(
-                        "assets/images/logo_svg.svg",
+                        provider.themeMode==ThemeMode.light
+                        ?"assets/images/logo_svg.svg"
+                        :"assets/images/logo_dark_svg.svg",
                         width: width * 0.25,
                       ),
-                      SizedBox(width: width * 0.04),
+                      SizedBox(width: width * 0.02),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                           Text(
                             "Welcome to Route",
                             style: TextStyle(
-                              fontSize: width * 0.04,
+                              fontSize: width * 0.03,
                               fontWeight: FontWeight.w400,
                               color: Theme.of(context).colorScheme.onSecondaryContainer
                             ),
@@ -57,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                           Text(
                             "Enjoy our courses",
                             style: TextStyle(
-                              fontSize: width * 0.046,
+                              fontSize: width * 0.03,
                               fontWeight: FontWeight.w500,
                                 color: Theme.of(context).colorScheme.onSurface
               
@@ -90,16 +92,15 @@ class HomeScreen extends StatelessWidget {
                               ?"assets/icons/icon_moon.svg"
                               :"assets/icons/icon_sun.svg"
                           ,
-                          width: width * 0.04,
+                          width: width * 0.06,
                         ),
                       ),
-                      SizedBox(width: width * 0.04),
                       IconButton(
                         onPressed: () {
                           FirebaseAuth.instance.signOut();
                           Navigator.pushNamedAndRemoveUntil(context, LogInScreen.route, (route) => false);
                         },
-                        icon: Icon(Icons.logout_sharp, size: width * 0.04, color: Theme.of(context).colorScheme.onSurfaceVariant),
+                        icon: Icon(Icons.logout_sharp, size: width * 0.06, color: Theme.of(context).colorScheme.onSurfaceVariant),
                       ),
                     ],
                   ),
@@ -153,8 +154,7 @@ class HomeScreen extends StatelessWidget {
                         return Text("Error: ${snapshot.error}");
                       } //error
 
-                      List<FeaturedCourse> allFeaturedCourse =
-                          snapshot.data ?? [];
+                      List<FeaturedCourse> allFeaturedCourse = snapshot.data ?? [];
 
 
                       return ListView.builder(

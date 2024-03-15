@@ -30,7 +30,7 @@ class EditText extends StatelessWidget {
       keyboardType: keyboardType,
       obscureText: obscureText,
       style: TextStyle(
-        fontSize: width * 0.03,
+        fontSize: width * 0.02,
         fontWeight: FontWeight.w600,
         color: Theme.of(context).colorScheme.onSecondary,
       ),
